@@ -1,5 +1,6 @@
 package com.wakaleo.gameoflife.webtests.controllers;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +23,7 @@ import com.wakaleo.gameoflife.domain.Universe;
 @RequestMapping("/game")
 public class GameController {
 	// For generating random thread sleep times
-    private Random randomGenerator = new Random();
+    private Random randomGenerator = new SecureRandom();
 
 	// Clicking the "New Game" button on the main page loads the cell seletion page
     @RequestMapping("/new")
